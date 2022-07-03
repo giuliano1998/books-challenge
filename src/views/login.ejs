@@ -31,7 +31,9 @@
                 <div class="col-md-9 pe-5">
   
                   <input type="email" name="email" class="form-control form-control-lg" placeholder="example@gmail.com" />
-  
+                  <% if (locals.errors && errors.email) { %>
+                    <p style="color: #D84D09;"><%= errors.email.msg %> </p> 
+                <% } %>
                 </div>
               </div>
   
@@ -46,16 +48,22 @@
                 <div class="col-md-9 pe-5">
   
                   <input type="password" name="password" class="form-control form-control-lg" >
-  
+                  <% if (locals.errors && errors.password) { %>
+                    <p style="color: #D84D09;"><%= errors.password.msg %> </p> 
+                <% } %>
                 </div>
+                
               </div>
   
               <hr class="mx-n3">
-  
+              <div>
+                <input  type="checkbox" name="recordame">
+                <label for="">Remember my user</label>
+            </div>
               <div class="px-5 py-4">
                 <button type="submit" class="btn btn-primary btn-lg">Login</button>
               </div>
-  
+              
             </div>
           </form>
   

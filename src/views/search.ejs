@@ -21,7 +21,9 @@
           <button type="submit" class="btn btn-secondary">Search</button>
         </div>
       </form>
-
+      <% if(locals.notFound == true) { %> 
+        <%- include('partials/busquedaNoEncontrada.ejs') %> 
+        <% } %> 
 
     <div class="list-group">
       
